@@ -1,5 +1,6 @@
-# Intellij
+# Editor
 .idea/
 
-# Dependency directories
+# Generated
 node_modules/
+dist/
