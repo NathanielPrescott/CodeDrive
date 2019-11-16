@@ -15,8 +15,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --config build/webpack.dev.config.js",
-    "build": "webpack --config build/webpack.dev.config.js",
-    "lint": "eslint --ext=.js,.vue client service"
+    "build": "webpack --config build/webpack.dev.config.js && jest",
+    "lint": "eslint --ext=.js,.vue client service",
+    "test": "jest"
   },
   "dependencies": {
     "express": "^4.16.4",
@@ -26,6 +27,7 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -44,5 +46,8 @@
     "webpack-dev-server": "^3.9.0",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^4.2.2"
+  },
+  "jest": {
+    "moduleFileExtensions": ["js"]
   }
 }

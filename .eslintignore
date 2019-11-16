@@ -2,4 +2,6 @@ node_modules/*
 build/*
 dist/*
 
+*/*.test.js
+
 .eslintrc.js
