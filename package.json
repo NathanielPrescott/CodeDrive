@@ -5,30 +5,44 @@
   "author": "Nathaniel Prescott",
   "description": "This project is being built to give access to Non-Profits without the means to pay for large development teams to let the community help where needed.",
   "keywords": [],
-  "main": "index.js",
+  "main": "client/index.js",
   "homepage": "https://github.com/NathanielPrescott/CodeDrive#readme",
   "bugs": "https://github.com/NathanielPrescott/CodeDrive/issues",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NathanielPrescott/CodeDrive.git"
   },
   "scripts": {
-    "start": "npm run client ",
-    "client": "nodemon client/index.js",
-    "service": "nodemon service/index.js",
-    "mongod": "sudo service mongod start",
-    "lint": "eslint ."
+    "start": "webpack-dev-server --open --config build/webpack.dev.config.js",
+    "build": "webpack --config build/webpack.dev.config.js",
+    "lint": "eslint --ext=.js,.vue client service"
   },
   "dependencies": {
     "express": "^4.16.4",
     "octonode": "^0.9.5"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-loader": "^3.0.2",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-vue": "^5.2.3",
+    "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
-    "nodemon": "^1.19.4"
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-merge": "^4.2.2"
   }
 }

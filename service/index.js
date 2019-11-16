@@ -1,12 +1,6 @@
-const express = require('express');
+import { Rectangle } from './rectangle.js';
 
-const index = express();
-const port = process.env.PORT || 3100;
+const rectangle = new Rectangle(10, 10);
 
-index.get('/', (req, res) => {
-  res.send('Welcome to CodeDrive Service!');
-});
-
-index.listen(port, () => {
-  console.log(`Running on port ${port}`);
-});
+console.log("Service initialized!");
+console.log(rectangle.area);
