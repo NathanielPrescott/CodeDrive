@@ -21,8 +21,5 @@ module.exports = {
   plugins: [
     'vue',
     'import'
-  ],
-  rules: {
-    'vue/no-unused-vars': 'error'
-  }
+  ]
 };
