@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatMenuTrigger } from "@angular/material/menu";
+import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DialogLoginComponent } from '../dialog-login/dialog-login.component';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +9,13 @@ import { MatMenuTrigger } from "@angular/material/menu";
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private matDialog: MatDialog) { }
 
-  ngOnInit(): void {
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    this.matDialog.open(DialogLoginComponent, dialogConfig);
   }
 
-  @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
+  ngOnInit(): void {}
 
-  someMethod() {
-    this.trigger.openMenu();
-  }
 }

@@ -1,16 +1,16 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App', () => {
+describe('CodeDrive App', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display title of CodeDrive', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('CodeDrive app is running!');
+    expect(page.getTitleText()).toEqual('CodeDrive');
   });
 
   afterEach(async () => {

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-import { ProjectsBannerComponent } from "../projects-banner/projects-banner.component";
-import { ProjectComponent } from "../project/project.component";
+import { ProjectsBannerComponent } from '../projects-banner/projects-banner.component';
+import { ProjectComponent } from '../project/project.component';
 
 const routes: Routes = [
   { path: 'projects-banner', component: ProjectsBannerComponent },
