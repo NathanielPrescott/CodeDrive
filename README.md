@@ -85,7 +85,7 @@ in your browser go to [http://localhost:4200](http://localhost:4200)
 
 ### Author
 * Updated: 4/19/2020
-* Author: Nathan
+* Author: Nathan Prescott
 
 ## Referencing
 * https://github.com/ganatan/angular9-app
